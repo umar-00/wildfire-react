@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/fire-alert";
 import SideBarToggleButton from "./SideBarToggleButton";
 
-const Header = ({ handleChange }) => {
+const Header = ({ handleRadioChange, handleSideBarToggle }) => {
   return (
     <header className="header">
       <h1>
@@ -15,7 +15,7 @@ const Header = ({ handleChange }) => {
           value="wildfires"
           name="disaster"
           defaultChecked
-          onChange={handleChange}
+          onChange={handleRadioChange}
           id="Wildfire"
         />
         {""}
@@ -26,7 +26,7 @@ const Header = ({ handleChange }) => {
           type="radio"
           value="storms"
           name="disaster"
-          onChange={handleChange}
+          onChange={handleRadioChange}
           id="Storm"
         />{" "}
         <label htmlFor="Storm">
@@ -36,7 +36,7 @@ const Header = ({ handleChange }) => {
           type="radio"
           value="volcanoes"
           name="disaster"
-          onChange={handleChange}
+          onChange={handleRadioChange}
           id="Volcano"
         />
         {""}
@@ -46,7 +46,7 @@ const Header = ({ handleChange }) => {
       </div>
 
       {/* <div className="menu-button"></div> */}
-      <SideBarToggleButton />
+      <SideBarToggleButton handleSideBarToggle={handleSideBarToggle} />
     </header>
   );
 };

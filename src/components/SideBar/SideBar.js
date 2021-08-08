@@ -1,15 +1,17 @@
 import React from "react";
 
-const SideBar = ({ handleChange }) => {
+import "./SideBar.css";
+
+const SideBar = ({}) => {
   return (
-    <nav>
-      <div className="radio-container">
+    <nav className="side-bar">
+      <div className="radio-container-side-bar">
         <input
           type="radio"
           value="wildfires"
           name="disaster"
           defaultChecked
-          onChange={handleChange}
+          // onChange={handleChange}
           id="Wildfire"
         />
         {""}
@@ -20,7 +22,7 @@ const SideBar = ({ handleChange }) => {
           type="radio"
           value="storms"
           name="disaster"
-          onChange={handleChange}
+          // onChange={handleChange}
           id="Storm"
         />{" "}
         <label htmlFor="Storm">
@@ -30,7 +32,7 @@ const SideBar = ({ handleChange }) => {
           type="radio"
           value="volcanoes"
           name="disaster"
-          onChange={handleChange}
+          // onChange={handleChange}
           id="Volcano"
         />
         {""}

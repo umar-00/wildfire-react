@@ -1,0 +1,46 @@
+.side-bar {
+  height: 100vh;
+  width: 60vw;
+  background: white;
+  position: fixed;
+  z-index: 2;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+
+.radio-container-side-bar {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.radio-container-side-bar span {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.radio-container-side-bar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-container-side-bar label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f2dc5d; */
+  background-color: rgba(255, 221, 163, 0.7);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-container-side-bar input[type="radio"]:checked + label {
+  /* background-color: #ffdda1; */
+  background-color: #ffff82;
+  color: black;
+}
