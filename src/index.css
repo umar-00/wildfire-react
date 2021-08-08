@@ -5,21 +5,28 @@ body {
 }
 
 .header {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
   background-color: firebrick;
   color: white;
+  /* position: fixed; */
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
 }
 
 .header h1 {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 25px;
   margin: 0;
   padding: 0;
-  text-align: 0;
+  text-align: center;
 }
 
 .header-icon {
@@ -30,7 +37,7 @@ body {
 
 .map {
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   position: relative;
 }
 
@@ -43,12 +50,14 @@ body {
   cursor: pointer;
 }
 
-.location-info {
+.location-info-modal {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 60px;
   width: 400px;
-  min-height: 200px;
+  min-height: 180px;
   padding: 20px;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
@@ -56,11 +65,61 @@ body {
   font-size: 18px;
 }
 
-.location-info ul {
+.location-info-modal ul {
   list-style: none;
   padding: 0;
 }
 
-.location-info li {
+.location-info-modal li {
   padding: 5px 0;
+}
+
+.close-modal-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  /* background: red; */
+  font-size: 25px;
+  color: white;
+}
+
+.close-modal-button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .location-info-modal {
+    font-size: 16px;
+    width: 200px;
+    min-height: 100px;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+  }
+
+  .location-info-modal h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .location-info-modal {
+    padding: 10px;
+    font-size: 14px;
+    width: 100px;
+    min-height: 50px;
+    top: 70px;
+    right: 10px;
+    overflow: hidden;
+  }
+
+  .location-info-modal h2 {
+    font-size: 16px;
+  }
 }

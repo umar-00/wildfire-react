@@ -5,12 +5,16 @@ import LocationInfoModal from "./LocationInfoModal";
 
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null);
+  const [show, setShow] = useState(false);
+  // const isModalRef = useRef(true);
 
-  console.log(eventData[0]);
+  // console.log(isModalRef);
+  // console.log(eventData[0]);
 
   return (
     <div className="map">
       <GoogleMapReact
+        onClick={() => setShow(false)}
         bootstrapURLKeys={{ key: "AIzaSyA2tNwWfXkysXss4JleY7SX1SaZJbK93Bc" }}
         defaultCenter={center}
         defaultZoom={zoom}
@@ -21,14 +25,21 @@ const Map = ({ eventData, center, zoom }) => {
               key={event.id}
               lat={event.geometries[0].coordinates[1]}
               lng={event.geometries[0].coordinates[0]}
-              onClick={() =>
-                setLocationInfo({ id: event.id, title: event.title })
-              }
+              onClick={() => {
+                setLocationInfo({ id: event.id, title: event.title });
+                setShow(true);
+              }}
             />
           ) : null
         )}
       </GoogleMapReact>
-      {locationInfo && <LocationInfoModal info={locationInfo} />}
+      {locationInfo && (
+        <LocationInfoModal
+          info={locationInfo}
+          onClick={() => setShow(false)}
+          show={show}
+        />
+      )}
     </div>
   );
 };
