@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import Map from "./components/Map";
 import Loader from "./components/Loader/Loader";
 import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 
 function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState([]);
+  const [disasterEvent, setDisasterEvent] = useState("wildfires");
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -19,15 +21,30 @@ function App() {
       setLoading(false);
     };
 
+    // handleRadioChange();
+
     fetchEvents();
   }, []);
+
+  const handleRadioChange = (e) => {
+    setDisasterEvent(e.target.value);
+  };
+
+  // console.log(disasterEvent);
 
   // console.log(eventData);
 
   return (
     <div>
-      <Header />
-      <div>{!loading ? <Map eventData={eventData} /> : <Loader />}</div>
+      <Header handleChange={handleRadioChange} />
+      <SideBar />
+      <div>
+        {!loading ? (
+          <Map eventData={eventData} eventSelection={disasterEvent} />
+        ) : (
+          <Loader />
+        )}
+      </div>
     </div>
   );
 }

@@ -1,26 +1,52 @@
 import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/fire-alert";
-import searchIcon from "@iconify/icons-bx/bx-search-alt";
+import SideBarToggleButton from "./SideBarToggleButton";
 
-const Header = () => {
+const Header = ({ handleChange }) => {
   return (
     <header className="header">
       <h1>
-        <Icon className="header-icon" icon={locationIcon} /> Wildfire Tracker
-        (Powered by NASA)
+        <Icon className="header-icon" icon={locationIcon} /> Disaster Events
+        Tracker
       </h1>
       <div className="radio-container">
-        <input type="radio" id="html" value="wildfires" defaultChecked></input> 
+        <input
+          type="radio"
+          value="wildfires"
+          name="disaster"
+          defaultChecked
+          onChange={handleChange}
+          id="Wildfire"
+        />
         {""}
-        <label for="html">Wildfires</label>
-        {/* <br></br> */}
-        <input type="radio" id="html" value="severe-storms"></input> {""}
-        <label for="html">Severe Storms</label>
-        {/* <br></br> */}
-        <input type="radio" id="html" value="volcanoes"></input> {""}
-        <label for="html">Volcanoes</label>
-        {/* <br></br> */}
+        <label htmlFor="Wildfire">
+          <span> Wildfires </span>
+        </label>
+        <input
+          type="radio"
+          value="storms"
+          name="disaster"
+          onChange={handleChange}
+          id="Storm"
+        />{" "}
+        <label htmlFor="Storm">
+          <span>Storms</span>
+        </label>
+        <input
+          type="radio"
+          value="volcanoes"
+          name="disaster"
+          onChange={handleChange}
+          id="Volcano"
+        />
+        {""}
+        <label htmlFor="Volcano">
+          <span>Volcanoes</span>
+        </label>
       </div>
+
+      {/* <div className="menu-button"></div> */}
+      <SideBarToggleButton />
     </header>
   );
 };

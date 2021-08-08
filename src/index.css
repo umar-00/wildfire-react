@@ -5,12 +5,21 @@ body {
 }
 
 .header {
-  min-height: 5vh;
+  font-family: "Poppins", sans-serif;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: firebrick;
+  padding: 10px 20px;
+  /* background-color: firebrick; */
+  background-color: #e23c12;
+  /* background: rgb(230, 132, 20);
+  background: linear-gradient(
+    0deg,
+    rgba(230, 132, 20, 1) 0%,
+    rgba(250, 202, 21, 1) 100%
+  ); */
+  /* rgb(178, 34, 34) */
   color: white;
   /* position: fixed; */
   top: 0;
@@ -35,9 +44,77 @@ body {
   margin-bottom: 1px;
 }
 
+.radio-container {
+  /* font-weight: 800; */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  /* border: 1px solid black; */
+}
+
+.radio-container span {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.radio-container input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-container label {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* background-color: #f2dc5d; */
+  background-color: rgba(255, 221, 163, 0.3);
+  padding: 10px 15px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked + label {
+  /* background-color: #ffdda1; */
+  background-color: #ffff82;
+  color: black;
+
+  /* background-color: rgb(255, 115, 0); */
+}
+
+.menu-button {
+  display: none;
+}
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 32px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line {
+  width: 30px;
+  height: 2px;
+  background: white;
+}
+
 .map {
   width: 100vw;
-  height: 95vh;
+  height: 93vh;
   position: relative;
 }
 
@@ -78,8 +155,8 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   /* background: red; */
   font-size: 25px;
   color: white;
@@ -92,6 +169,12 @@ body {
 @media screen and (max-width: 768px) {
   .header h1 {
     font-size: 20px;
+  }
+
+  .radio-container span {
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
   }
 
   .location-info-modal {
@@ -108,11 +191,26 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
+  .menu-button {
+    display: block;
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+  }
+
+  .radio-container {
+    display: none;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
   .location-info-modal {
     padding: 10px;
     font-size: 14px;
-    width: 100px;
+    width: 30%;
     min-height: 50px;
     top: 70px;
     right: 10px;
@@ -121,5 +219,14 @@ body {
 
   .location-info-modal h2 {
     font-size: 16px;
+  }
+
+  .close-modal-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    /* background: red; */
+    font-size: 18px;
+    color: white;
   }
 }
