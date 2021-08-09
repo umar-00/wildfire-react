@@ -1,9 +1,9 @@
 import React from "react";
 import "./DropDownToggleButton.css";
 
-const DropDownToggleButton = ({ handleSideBarToggle }) => {
+const DropDownToggleButton = ({ toggleClick }) => {
   return (
-    <button className="toggle-button" onClick={handleSideBarToggle}>
+    <button className="toggle-button" onClick={toggleClick}>
       <div className="toggle-button-line" />
       <div className="toggle-button-line" />
       <div className="toggle-button-line" />

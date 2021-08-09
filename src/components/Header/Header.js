@@ -47,7 +47,7 @@ const Header = ({ handleRadioChange, handleSideBarToggle }) => {
       </div>
 
       {/* <div className="menu-button"></div> */}
-      <DropDownToggleButton handleSideBarToggle={handleSideBarToggle} />
+      <DropDownToggleButton toggleClick={handleSideBarToggle} />
     </header>
   );
 };
