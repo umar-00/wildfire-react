@@ -3,7 +3,7 @@ import Map from "./components/Map";
 import Loader from "./components/Loader/Loader";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar/SideBar";
-import BackDrop from "./components/BackDrop/BackDrop";
+// import BackDrop from "./components/BackDrop/BackDrop";
 
 function App() {
   const [eventData, setEventData] = useState([]);
@@ -40,16 +40,23 @@ function App() {
     <div>
       <Header
         handleRadioChange={handleRadioChange}
-        handleSideBarToggle={() => setSideBarOpen(true)}
+        handleSideBarToggle={() => setSideBarOpen((prevState) => !prevState)}
       />
-      {sideBarOpen && <SideBar />}
-      {sideBarOpen && (
+      <SideBar
+        handleSideBarToggle={() => setSideBarOpen(false)}
+        show={sideBarOpen}
+      />
+      {/* {sideBarOpen && (
         <BackDrop handleSideBarToggle={() => setSideBarOpen(false)} />
-      )}
+      )} */}
 
       <div>
         {!loading ? (
-          <Map eventData={eventData} eventSelection={disasterEvent} />
+          <Map
+            eventData={eventData}
+            eventSelection={disasterEvent}
+            handleSideBarToggle={() => setSideBarOpen(false)}
+          />
         ) : (
           <Loader />
         )}

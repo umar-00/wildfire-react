@@ -1,23 +1,35 @@
 .side-bar {
-  height: 100vh;
-  width: 60vw;
+  /* display: flex; */
+  /* flex-direction: column; */
+  min-height: 7vh;
+  width: 100vw;
   background: white;
   position: fixed;
-  z-index: 2;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
+  z-index: 1;
+  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5);
+  top: 9vh;
+  /* left: 0; */
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-out;
+}
+
+.side-bar.open {
+  /* z-index: 4; */
+  transform: translateY(0vh);
+  /* transform: translateZ(); */
 }
 
 .radio-container-side-bar {
   margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   gap: 15px;
 }
 
 .radio-container-side-bar span {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
@@ -39,8 +51,12 @@
   cursor: pointer;
 }
 
-.radio-container-side-bar input[type="radio"]:checked + label {
-  /* background-color: #ffdda1; */
+.radio-container-side-bar label:focus {
+  border: 1px solid black;
+}
+
+/* .radio-container-side-bar input[type="radio"]:checked + label {
+  background-color: #ffdda1;
   background-color: #ffff82;
   color: black;
-}
+} */

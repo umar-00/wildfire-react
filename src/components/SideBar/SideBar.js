@@ -2,9 +2,14 @@ import React from "react";
 
 import "./SideBar.css";
 
-const SideBar = ({}) => {
+const SideBar = ({ handleSideBarToggle, show }) => {
+  let sideBarClasses = "side-bar";
+  if (show) {
+    sideBarClasses = "side-bar open";
+  }
+
   return (
-    <nav className="side-bar">
+    <nav className={sideBarClasses}>
       <div className="radio-container-side-bar">
         <input
           type="radio"
@@ -15,7 +20,7 @@ const SideBar = ({}) => {
           id="Wildfire"
         />
         {""}
-        <label htmlFor="Wildfire">
+        <label htmlFor="Wildfire" onClick={handleSideBarToggle}>
           <span> Wildfires </span>
         </label>
         <input
@@ -25,7 +30,7 @@ const SideBar = ({}) => {
           // onChange={handleChange}
           id="Storm"
         />{" "}
-        <label htmlFor="Storm">
+        <label htmlFor="Storm" onClick={handleSideBarToggle}>
           <span>Storms</span>
         </label>
         <input
@@ -36,7 +41,7 @@ const SideBar = ({}) => {
           id="Volcano"
         />
         {""}
-        <label htmlFor="Volcano">
+        <label htmlFor="Volcano" onClick={handleSideBarToggle}>
           <span>Volcanoes</span>
         </label>
       </div>

@@ -8,7 +8,13 @@ import fireIcon from "@iconify/icons-mdi/fire-alert";
 import stormIcon from "@iconify/icons-carbon/thunderstorm-severe";
 import volcanoIcon from "@iconify/icons-maki/mountain";
 
-const Map = ({ eventData, center, zoom, eventSelection }) => {
+const Map = ({
+  eventData,
+  center,
+  zoom,
+  eventSelection,
+  handleSideBarToggle,
+}) => {
   const [locationInfo, setLocationInfo] = useState(null);
   const [show, setShow] = useState(false);
 
@@ -17,7 +23,7 @@ const Map = ({ eventData, center, zoom, eventSelection }) => {
   // console.log(eventSelection);
 
   return (
-    <div className="map">
+    <div className="map" onClick={handleSideBarToggle}>
       <GoogleMapReact
         onClick={() => setShow(false)}
         bootstrapURLKeys={{ key: "AIzaSyA2tNwWfXkysXss4JleY7SX1SaZJbK93Bc" }}
