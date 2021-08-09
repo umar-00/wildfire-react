@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Map from "./components/Map";
+import Map from "./components/Map/Map";
 import Loader from "./components/Loader/Loader";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import SideBar from "./components/SideBar/SideBar";
 // import BackDrop from "./components/BackDrop/BackDrop";
 

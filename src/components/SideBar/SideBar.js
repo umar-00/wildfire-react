@@ -15,7 +15,6 @@ const SideBar = ({ handleSideBarToggle, show }) => {
           type="radio"
           value="wildfires"
           name="disaster"
-          defaultChecked
           // onChange={handleChange}
           id="Wildfire"
         />

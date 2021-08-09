@@ -1,0 +1,8 @@
+.location-icon {
+  font-size: 2rem;
+  color: red;
+}
+
+.location-icon:hover {
+  cursor: pointer;
+}

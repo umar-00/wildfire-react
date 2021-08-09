@@ -1,6 +1,7 @@
 import React from "react";
+import "./DropDownToggleButton.css";
 
-const SideBarToggleButton = ({ handleSideBarToggle }) => {
+const DropDownToggleButton = ({ handleSideBarToggle }) => {
   return (
     <button className="toggle-button" onClick={handleSideBarToggle}>
       <div className="toggle-button-line" />
@@ -10,4 +11,4 @@ const SideBarToggleButton = ({ handleSideBarToggle }) => {
   );
 };
 
-export default SideBarToggleButton;
+export default DropDownToggleButton;

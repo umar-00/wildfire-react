@@ -1,0 +1,31 @@
+.menu-button {
+  display: none;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 32px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line {
+  width: 30px;
+  height: 2px;
+  background: white;
+}
+@media screen and (max-width: 540px) {
+  .toggle-button {
+    display: flex;
+  }
+}
