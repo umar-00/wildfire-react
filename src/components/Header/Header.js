@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/fire-alert";
-import DropDownToggleButton from "../../DropDownToggleButton/DropDownToggleButton";
+import DropDownToggleButton from "../DropDownToggleButton/DropDownToggleButton";
 import "./Header.css";
 
 const Header = ({ handleRadioChange, handleSideBarToggle }) => {
