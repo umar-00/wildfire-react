@@ -3,7 +3,9 @@
   /* flex-direction: column; */
   min-height: 7vh;
   width: 100vw;
-  background: white;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  background-color: rgba(255, 255, 255, 1);
+  /* background-color: #548687; */
   position: fixed;
   z-index: 1;
   box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5);
@@ -46,6 +48,7 @@
   align-items: center;
   /* background-color: #f2dc5d; */
   background-color: rgba(255, 221, 163, 0.7);
+  /* background-color: #ffff82; */
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
