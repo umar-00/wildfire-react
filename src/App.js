@@ -9,7 +9,7 @@ function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState([]);
   const [disasterEvent, setDisasterEvent] = useState("wildfires");
-  const [sideBarOpen, setSideBarOpen] = useState(true);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   useEffect(() => {
     const fetchEvents = async () => {

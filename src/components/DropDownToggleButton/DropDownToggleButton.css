@@ -2,7 +2,7 @@
   display: none;
 }
 
-.toggle-button {
+/* .toggle-button {
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -13,10 +13,26 @@
   padding: 0;
   box-sizing: border-box;
   cursor: pointer;
+} */
+
+.toggle-button {
+  display: none;
+  align-items: center;
+  text-align: center;
+  border: none;
+  background-color: #ffff82;
+  padding: 10px 7px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, transform 0.1s ease-out;
 }
 
-.toggle-button:focus {
-  outline: none;
+.toggle-button:active {
+  transform: scale(1.05);
 }
 
 .toggle-button-line {

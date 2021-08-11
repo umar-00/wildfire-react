@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  overflow: hidden;
   /* background-color: firebrick; */
   background-color: #e23c12;
   color: white;
@@ -18,7 +19,7 @@
 .header h1 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 25px;
   margin: 0;
   padding: 0;
