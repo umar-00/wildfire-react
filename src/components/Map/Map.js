@@ -66,7 +66,7 @@ const Map = ({
               />
             ) : null
           )}
-        {/* Volcanoes events that have a 2d coordinate array are mapped seperately */}
+        {/* Volcanoes events that have a 2d coordinate array (from api) are mapped seperately */}
         {eventSelection === "volcanoes" &&
           eventData.map((event) =>
             event.categories[0].id === 12 ? (

@@ -11,6 +11,18 @@
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   font-size: 18px;
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.location-info-modal.show {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: visible;
 }
 
 .location-info-modal ul {

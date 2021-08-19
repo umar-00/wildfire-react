@@ -1,12 +1,12 @@
 import "./LocationInfoModal.css";
 
 const LocationInfoModal = ({ info, onClick, show }) => {
-  if (!show) {
-    return null;
-  }
+  // if (!show) {
+  //   return null;
+  // }
 
   return (
-    <div className="location-info-modal">
+    <div className={`location-info-modal ${show ? "show" : ""}`}>
       <h2>Event location info</h2>
       <ul>
         <li>
