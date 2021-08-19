@@ -43,7 +43,7 @@ const Map = ({
                 lng={event.geometries[0].coordinates[0]}
                 icon={fireIcon}
                 onClick={(e) => {
-                  console.log(e);
+                  // console.log(e);
                   // e.preventDefault();
                   setLocationInfo({ id: event.id, title: event.title });
                   setShow(true);
